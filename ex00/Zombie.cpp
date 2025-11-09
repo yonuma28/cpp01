@@ -12,7 +12,7 @@
 
 # include "Zombie.hpp"
 
-Zombie::Zombie() {
+Zombie::Zombie( std::string name ) : name_( name ) {
 	std::cout << "created a constractor." << std::endl;
 }
 

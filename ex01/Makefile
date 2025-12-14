@@ -1,7 +1,7 @@
-NAME = braiz
+NAME = Moar_brainz
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic-errors
-SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRC = main.cpp Zombie.cpp zombieHorde.cpp
 
 all: $(NAME)
 

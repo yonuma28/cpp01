@@ -12,7 +12,7 @@
 
 # include "Zombie.hpp"
 
-void    randomChump(std::string name)
+void    randomChump(std::string name_)
 {
-    Zombie  randomZombie( std::string name)
+    Zombie  randomZombie( std::string name_);
 }

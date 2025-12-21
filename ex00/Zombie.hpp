@@ -1,20 +1,19 @@
 #ifndef ZOMBIE_H
+# define ZOMBIE_H
 # include <string>
 # include <iostream>
 
 class Zombie {
 	public: 
+		Zombie();
 		Zombie(std::string name_);
 		~Zombie();
-		Zombie* newZombie(std::string);
-		void	randomChump(std::string name_);
 		void	announce();
 	private: 
 		std::string	name_;
 };
 
-void	Zombie::announce() {
-	std::cout << name_ << std::endl;
-}
+Zombie* newZombie(std::string name);
+void randomChump(std::string name);
 
 #endif // ZOMBIE_H

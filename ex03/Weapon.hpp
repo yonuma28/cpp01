@@ -13,4 +13,4 @@ class Weapon
 		std::string type_;
 };
 
-#endif
+#endif //WEAPON_H

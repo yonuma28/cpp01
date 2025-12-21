@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <string>
 
 std::string replace(const std::string& str, const std::string& s1, const std::string& s2)
@@ -41,7 +42,6 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	// char* から std::string への変換が必須。そのための処理
 	std::string	outFilename = std::string(argv[1]) + ".replace";
 	std::ofstream	outFile(outFilename.c_str());
 	if (!outFile.is_open())
@@ -54,10 +54,12 @@ int main(int argc, char *argv[])
 	std::string s2 = argv[3];
 	std::string line;
 
-	while (std::getline(inputFile, line))
-	{
-		outFile << replace(line, s1, s2) << std::endl;
-	}
+	std::stringstream ss;
+	ss << inputFile.rdbuf();
+	std::string content = ss.str();
+
+	std::string result = replace(content, s1, s2);
+	outFile << result;
 
 	inputFile.close();
 	outFile.close();

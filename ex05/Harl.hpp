@@ -15,4 +15,4 @@ class Harl {
 		typedef void (Harl::*HarlFunc)(void);
 };
 
-#endif
+#endif //HARL_H

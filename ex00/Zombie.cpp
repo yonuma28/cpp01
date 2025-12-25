@@ -3,7 +3,6 @@
 Zombie::Zombie() : name_("default") {}
 
 Zombie::Zombie( std::string name ) : name_( name ) {
-	std::cout << name_ << ": created a constractor." << std::endl;
 }
 
 Zombie::~Zombie() {

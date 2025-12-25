@@ -10,6 +10,7 @@ int main() {
 		delete[] horde;
 	} else {
 		std::cerr << "Failed to create zombie horde." << std::endl;
+		return 1;
 	}
 	return 0;
 }

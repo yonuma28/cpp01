@@ -9,12 +9,9 @@ class Zombie
     private:
         std::string name_;
     public:
-        // OCM
         Zombie();
         Zombie(std::string name_);
         ~Zombie();
-        Zombie(const Zombie& copy);
-        Zombie& operator=(const Zombie& copy);
         void    announce();
         void    setName(std::string name_);
 };

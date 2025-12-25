@@ -1,6 +1,6 @@
 # include "Zombie.hpp"
 
-Zombie::Zombie() {}
+Zombie::Zombie() : name_("default") {}
 
 Zombie::Zombie(std::string name) : name_(name) {}
 

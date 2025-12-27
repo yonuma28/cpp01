@@ -3,13 +3,18 @@
 
 Zombie* zombieHorde(int N, std::string name)
 {
-    if (N <= 0)
-    {
-        std::cout << "Error: Number of zombies must be positive." << std::endl;
-        return (NULL);
+    if (N <= 0) return nullptr;
+
+    Zombie* horde = nullptr;
+    try {
+        horde = new Zombie[N];
+        for (int i = 0; i < N; i++) {
+            horde[i].setName(name); 
+        }
+        return horde;
+    } catch (...) {
+        delete[] horde; 
+        std::cerr << "Error: Exception during initialization." << std::endl;
+        throw;
     }
-    Zombie* horde = new Zombie[N];
-    for (int i = 0; i < N; i++)
-        horde[i].setName(name);
-    return (horde);
 }
